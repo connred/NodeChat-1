@@ -28,7 +28,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        socket = SocketIOClient(socketURL: URL(string: "http://localhost")!)
+        socket = SocketIOClient(socketURL: URL(string: "http://130.211.216.160")!)
         addConnectionHandlers()
         addMessageHandlers()
         socket!.connect()

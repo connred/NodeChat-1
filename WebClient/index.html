@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>NodeChat</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+    <title>Node Chat</title>
+    <link rel="stylesheet" href="main.css"> </head>
 
 <body>
     <div id="content">
-        <h1>Chat</h1>
-        <div id="error"></div>
-        <div id="noerror">
-            <div id="user">
-                <span>My name is: </span>
-                <input type="text" id="user-name">
-                <button id="user-save">Save</button>
-            </div>
+        <h1>NC</h1>
+        <div id="password"> <span id="span1">Password:</span>
+            <input type="password" id="pass-input">
+            <button id="pass-enter">Enter</button>
+        </div>
+        <br>
+        <div id="user" hidden> <span id="span2">Enter Name:</span>
+            <input id="user-name" disabled>
+            <button id="user-save" disabled>Save</button>
+        </div>
+        <br>
+        <div id="log" hidden>
+            <div class="messsage"></div>
+        </div>
+        <br>
+        <div id="controls">
+            <input id="message" disabled>
             <br>
-            <div id="log">
-                <div class="message">Message Log:</div>
-            </div>
-            <br>
-            <div id="controls">
-                <input type="text" id="message" disabled="true">
-                <br>
-                <button id="send" disabled="true">Send</button>
-            </div>
+            <button id="send" disabled>Send</button>
+            <button id="show-button" hidden>Use Notifications</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
