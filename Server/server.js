@@ -6,7 +6,7 @@ var webroot = __dirname + '/../WebClient/';
 
 app.use('/', express.static(webroot));
 
-var server = http.listen(3000, function() {
+var server = http.listen(80, function() {
     console.log('hosting from ' + webroot);
     console.log('server listening on http://localhost/');
 });
@@ -21,7 +21,7 @@ io.sockets.on('connection', function(socket) {
     
     console.log('socket connected from ' + clientIp);
     
-    socket.emit('welcome', { text : 'OH HAI' });
+    socket.emit('welcome', { text : 'Connected to Chat' });
     
     socket.on('user', function(name) {
         console.log(name + ' connected');
